@@ -1,5 +1,4 @@
 variable "programa" {
-  requerid = true
   description = "exemplo de variavel"
   default     = "mentoria-iac"
 }
