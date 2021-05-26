@@ -1,5 +1,5 @@
 ##  Template Modulo Terraform
-Este repositorio contem uma estrutura básica para a criação de uma modulo do [terraform](https://www.terraform.io/). 
+Este repositorio contém uma estrutura básica para a criação de uma modulo do [terraform](https://www.terraform.io/). 
 
  $`` terraform-module/``
  
@@ -8,7 +8,7 @@ Este repositorio contem uma estrutura básica para a criação de uma modulo do 
  |--- outputs.tf  
  |--- version.tf
  
- Esses são os nomes de arquivos recomendados para um modulo minimo, mesmo ses estiverem vazios. 
+ Esses são os nomes de arquivos recomendados para um modulo mínimo, mesmo se estiverem vazios. 
  
  ``main.tf`` deve ser o ponto de entrada principal.
  Para um modulo simples, pode ser aqui que todos os recursos que são criados. Para uma modulo complexo pode ser divido em varios arquivos.
