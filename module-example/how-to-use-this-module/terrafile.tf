@@ -1,4 +1,4 @@
-module "estudos" {
+module "module_name" {
   source       = "../terraform-module"
   programa     = "mentoria-iac"
   ferramenta_1 = "docker"
@@ -7,5 +7,5 @@ module "estudos" {
 
 
 output "ferramentas" {
-  value = module.estudos.ferramentas
+  value = module.module_name.ferramentas
 }
