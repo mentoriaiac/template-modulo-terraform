@@ -55,4 +55,9 @@ Este repositorio deve conter a estrutura básica para a criação de uma modulo 
 
 Aqui você descreve como a pessoa que utilizar esse módulo pode testar localmente. Coloque todos os detalhes necessários para executar localmente.
 
+## Exemplos
+
+A pasta ``how-to-use-this-module`` contém exemplos de utilização do módulo. Esta abordagem é interessante para auxiliar na exeperiência de quem for utilizar este módulo no futuro. Já foi criado um arquivo terraform chamado `terrafile.tf` e ele deve ser usado como referência pra colocar dentro deste diretório de exemplos.
+
+
   
