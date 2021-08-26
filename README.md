@@ -8,7 +8,6 @@ Este repositorio deve conter a estrutura básica para a criação de uma modulo 
  |--- outputs.tf  
  |--- version.tf
 
-
  Esses são os nomes de arquivos recomendados para um modulo mínimo, mesmo se estiverem vazios. 
  
  ``main.tf`` deve ser o ponto de entrada principal.
