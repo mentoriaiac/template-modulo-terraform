@@ -34,7 +34,7 @@ jobs:
 
       - name: Terraform Validate
         id: validate
-        run: terraform validate -no-color
+        run: make validate
         working-directory: ./how-to-use-this-module
 
       - name: Validação do tfsec
