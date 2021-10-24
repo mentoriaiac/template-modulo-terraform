@@ -24,15 +24,18 @@ jobs:
       - name: Terraform Format
         id: fmt
         run: make fmt
+        working-directory: ./how-to-use-this-module
         continue-on-error: true
 
       - name: Terraform Init
         id: init
         run: make terraform-init
+        working-directory: ./how-to-use-this-module
 
       - name: Terraform Validate
         id: validate
         run: terraform validate -no-color
+        working-directory: ./how-to-use-this-module
 
       - name: Validação do tfsec
         id: tfsec
