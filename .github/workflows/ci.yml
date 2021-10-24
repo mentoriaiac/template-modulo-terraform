@@ -2,6 +2,9 @@ name: "Terraform"
 
 on:
   push:
+    branches:
+      - main
+      - feature/add-makefile
   pull_request:
 
 jobs:
