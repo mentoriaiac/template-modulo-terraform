@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - feature/add-makefile
   pull_request:
 
 jobs:
@@ -22,12 +23,12 @@ jobs:
 
       - name: Terraform Format
         id: fmt
-        run: terraform fmt -check
+        run: make fmt
         continue-on-error: true
 
       - name: Terraform Init
         id: init
-        run: terraform init
+        run: make terraform-init
 
       - name: Terraform Validate
         id: validate
