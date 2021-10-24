@@ -29,7 +29,7 @@ jobs:
 
       - name: Terraform Init
         id: init
-        run: make terraform-init
+        run: make init
         working-directory: ./how-to-use-this-module
 
       - name: Terraform Validate
