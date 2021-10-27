@@ -1,9 +1,18 @@
-resource "local_file" "ferramenta-1" {
-  content  = "${var.programa} - Estudos ${var.ferramenta_1}"
-  filename = "${path.root}/${var.ferramenta_1}.txt"
+data "hashicups_coffees" "all" {}
+
+locals {
+  coffee_name_id_map = { for coffee in data.hashicups_coffees.all.coffees : coffee.name => coffee.id }
 }
 
-resource "local_file" "ferramenta-2" {
-  content  = "${var.programa} - Estudos ${var.ferramenta_2}"
-  filename = "${path.root}/${var.ferramenta_2}.txt"
+resource "hashicups_order" "order" {
+  dynamic "items" {
+    for_each = var.order
+    content {
+      coffee {
+        id = local.coffee_name_id_map[items.key]
+      }
+      quantity = items.value
+    }
+  }
 }
+
