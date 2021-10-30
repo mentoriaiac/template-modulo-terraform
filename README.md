@@ -1,62 +1,38 @@
-##  Template Modulo Terraform
-Este repositorio deve conter a estrutura básica para a criação de uma modulo do [terraform](https://www.terraform.io/). 
-
- $`` module-example/``
- 
- |--- main.tf  
- |--- variable.tf  
- |--- outputs.tf  
- |--- version.tf
-
- Esses são os nomes de arquivos recomendados para um modulo mínimo, mesmo se estiverem vazios. 
- 
- ``main.tf`` deve ser o ponto de entrada principal.
- Para um modulo simples, pode ser aqui que todos os recursos que são criados. Para uma modulo complexo pode ser divido em varios arquivos.
- 
- ``variables.tf e outputs.tf`` deve conter as declarações das variaves e as saidas respectivamente.
- 
- ``versions.tf`` deve contem as versões dos recursos/provedores
-
 ## Requirements
 
 | Name | Version |
 |------|---------|
-| Terraform | >= 0.13.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
+| <a name="requirement_hashicups"></a> [hashicups](#requirement\_hashicups) | ~> 0.3.1 |
 
 ## Providers
-  
+
 | Name | Version |
 |------|---------|
-| local | n/a |
+| <a name="provider_hashicups"></a> [hashicups](#provider\_hashicups) | 0.3.1 |
+
+## Modules
+
+No modules.
 
 ## Resources
 
 | Name | Type |
 |------|------|
-| local_file | resource |
-| local_file | data source |
+| [hashicups_order.order](https://registry.terraform.io/providers/hashicorp/hashicups/latest/docs/resources/order) | resource |
+| [hashicups_coffees.all](https://registry.terraform.io/providers/hashicorp/hashicups/latest/docs/data-sources/coffees) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-|ferramenta_1 | exemplo de variavel | `string` | `"terraform"` | no |
-|ferramenta_2 | exemplo de variavel | `string` | `"ansible"` | no |
-|programa | exemplo de variavel | `string` | `"mentoria-iac"` | no |
+| <a name="input_order"></a> [order](#input\_order) | Mapa de cafe e quantidade | `map(number)` | n/a | yes |
 
 ## Outputs
- 
+
 | Name | Description |
 |------|-------------|
-|ferramentas | exemplo de saida |
+| <a name="output_order_id"></a> [order\_id](#output\_order\_id) | n/a |
 
-## Testar localmente
-
-Aqui você descreve como a pessoa que utilizar esse módulo pode testar localmente. Coloque todos os detalhes necessários para executar localmente.
-
-## Exemplos
-
-A pasta ``how-to-use-this-module`` contém exemplos de utilização do módulo. Esta abordagem é interessante para auxiliar na exeperiência de quem for utilizar este módulo no futuro. Já foi criado um arquivo terraform chamado `terrafile.tf` e ele deve ser usado como referência pra colocar dentro deste diretório de exemplos.
-
-
-  
+## Como usar esse módulo
+[Acesse o passo-a-passo](how-to-use-this-module/README.md)
